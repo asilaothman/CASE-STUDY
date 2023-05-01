@@ -1,6 +1,3 @@
-@@ -1 +1,19 @@
-# CASE-STUDY
-# CASE-STUDY
 # CASE STUDY!
 Group Name - **Itnan**
 Group Member Details
