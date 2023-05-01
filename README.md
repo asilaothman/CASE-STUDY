@@ -9,7 +9,7 @@ ANIS ASILA BINTI OTHMAN          |    1914782         |
 NUR ALIA BINTI MUHAMMAD   |2010884 |
 NURUL SHAHIRAH BINTI AHMAD FIKRI|2013890  |
 
-# ASSIGNED TASK
+# Assigned Task
 NAME                          |TASK                    |
 -------------------------------|-----------------------------|
 JAMA SABIRIN SAAD         |Server OS         |
