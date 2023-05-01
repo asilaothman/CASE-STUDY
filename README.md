@@ -1,5 +1,4 @@
-# CASE STUDY!
-Group Name - **Itnan**
+# Group Name - **Itnan**
 
 # Group Member Details
 
