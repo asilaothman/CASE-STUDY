@@ -1,6 +1,6 @@
 # CASE STUDY!
 Group Name - **Itnan**
-Group Member Details
+#Group Member Details
 
 |                |NAME                          |MATRIC NO                      |
 |----------------|-------------------------------|-----------------------------|
