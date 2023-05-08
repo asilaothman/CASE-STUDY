@@ -17,11 +17,15 @@ NURUL SHAHIRAH BINTI AHMAD FIKRI|2013890  |Information Disclosure, Strict-Transp
 **[Alerts & Vulnerabilities](#alerts-and-vulnerabilities)**<br>
 
 ## Introduction
-In this case study, we were able to examine and analyse the Malaysian government website by identifying all of its vulnerabilities and level of risk. The overall level of risk obtained was measured by assigning ranks such as high, low, or medium, and we obtained solutions to minimise the risk and overcome the threats it would face.We acknowledge that by recognising all of the alerts identified on this website while using Zap application, we were able to identify solutions to reduce risks and develop web applications that have high performance and security.
+In this case study, we were able to examine and analyse the Malaysian government website by identifying all of its vulnerabilities and level of risk. The overall level of risk obtained was measured by assigning ranks such as high, low, or medium, and we obtained solutions to minimise the risk and overcome the threats it would face. We acknowledge that by recognising all of the alerts identified on this website while using Zap application, we were able to identify solutions to reduce risks and develop web applications that have high performance and security.
 
 
 ## Objectives
-The case study is designed to evaluate our problem-solving skills and teamwork toward the given case. The  web application vulnerabilities that we have to identify are Malaysia Government website. 
+    1. To observe the type of alerts. 
+    2. Identify level of the risk. 
+    3. Evaluating the alerts. 
+    4. Mitigating to reduce the risk
+    5. Evaluate our problem-solving skill and teamwork
 
 ## Alerts And Vulnerabilities
 
@@ -37,11 +41,11 @@ The case study is designed to evaluate our problem-solving skills and teamwork t
   The Anti-MIME-Sniffing header X-Content-Type-Options was not set to 'nosniff', which allows older versions of Internet Explorer and Chrome to perform MIME-sniffing on the response body. This enables attackers to execute malicious code on the website by tricking the browser into interpreting a file as a different MIME type other than the MIME type that the file is actually intended to be. The website used one or more javascript files from a third-party domain where this parties can collect data of users. Moreover this vulnerability allows attackers to inject javascript file from different domain giving them the ability to get users information and credentials 
   
   * Prevention :
-    1.Developers must ensure that the X-Content-Type-Options header is set to 'nosniff' for all web pages while also setting the content type for the website to text/html. Moreover, all the users must use web browsers, such as Google Chrome, Firefox, internet Explorer or any other browser that do not perform MIME-sniffing 
+1.Developers must ensure that the X-Content-Type-Options header is set to 'nosniff' for all web pages while also setting the content type for the website to text/html. Moreover, all the users must use web browsers, such as Google Chrome, Firefox, internet Explorer or any other browser that do not perform MIME-sniffing 
 
-    2.Allow JavaScript source files to be loaded from only trusted sources by evaluating these parties based on their performance before allowing, and ensuring that the sources cannot be managed by application end users.
+2.Allow JavaScript source files to be loaded from only trusted sources by evaluating these parties based on their performance before allowing, and ensuring that the sources cannot be managed by application end users.
 
-    3.Use HTTPS protocol to increase the security of the site and prevent attackers from obtaining user credentials. 
+3.Use HTTPS protocol to increase the security of the site and prevent attackers from obtaining user credentials. 
 
 
 </details>
