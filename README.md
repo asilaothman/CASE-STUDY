@@ -106,7 +106,7 @@ NURUL SHAHIRAH BINTI AHMAD FIKRI|2013890  |Information Disclosure, Strict-Transp
 
 * Level of the risk - Low
 * Classification of threat - CWE ID 693
-* Identification :
+* Identification : The X-Content-Type-Options header is a security header that directs web browsers not to override the response content-type header. This is significant because some web browsers may try to "sniff" the content type of a response to determine the manner in which to deal with it. For instance, if a response is marked as "text/html" but actually contains JavaScript code, a browser may still try to run the JavaScript code, which could cause security problems. A server could be vulnerable to attacks like content spoofing, where an attacker could change the response content-type to deceive a browser into running malicious code, by leaving out the X-Content-Type-Options header. X-Content-Type-Options Header Missing is a vulnerability where a web server fails to include the "X-Content-Type-Options" header in its HTTP responses, which corresponds to CWE. By tricking a web browser into thinking a response is a different content type, an attacker can use MIME sniffing attacks, which are mitigated by this header. A web server may be vulnerable to content spoofing, MIME sniffing, cross-site scripting (XSS), and clickjacking attacks without the "X-Content-Type-Options" header.
 * Evaluation:
 * Prevention: 
 
@@ -116,9 +116,20 @@ NURUL SHAHIRAH BINTI AHMAD FIKRI|2013890  |Information Disclosure, Strict-Transp
 
 * Level of the risk - Informational
 * Classification of threat - CWE ID 200
-* Identification :
+* Identification : Information disclosure can be exploited by attackers in a variety of ways. Suspicious comments, which could be shared on a website or within a JavaScript file like the one in the URL, might be used by attackers to reveal confidential information such as usernames, passwords, or other personal data. This information could be used by attackers to carry out additional attacks, such as phishing or identity theft. Attackers could also use information disclosure as a form of monitoring, gathering information about a target or system in order to plan a more sophisticated attack. If suspicious comments indicate sensitive or private information to unauthorised parties, they may be classified as an information leak vulnerability under CWE-200. Such comments might include information that attackers might utilise to gain unauthorized access to a system or conduct other malicious activities.
 * Evaluation:
 * Prevention: 
+1. Secure coding practices: Developers should adhere to secure coding practices and use code review tools to identify and eliminate any suspicious comments. They should also be acquainted with best practices for security and kept up-to-date on the latest security threats and vulnerabilities.
+
+2. Sanitise user inputs and activate access controls: To prevent unauthorized access to sensitive data, applications should sanitize user inputs and implement access controls.
+
+3. Encrypt and hash sensitive data: To prevent unauthorized access and data leaks, sensitive data should be encrypted and hashed.
+
+4. Limit sensitive data exposure: Developers should limit sensitive data exposure by only maintaining it when necessary and keeping it concealed from potential hackers.
+
+5. Regularly monitoring system logs: It can aid in the detection of suspicious activity and the prevention of data leaks. This can include employing intrusion detection and prevention systems as well as monitoring network traffic for indications of attacks.
+
+6. Educate users: Users should be educated on the importance of keeping their personal information secure and the manner in which to avoid phishing scams and other common attacks that can lead to information disclosure.
 
 </details>
 
