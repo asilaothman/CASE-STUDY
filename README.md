@@ -27,10 +27,22 @@ The case study is designed to evaluate our problem-solving skills and teamwork t
 
 <details><summary>Server OS</summary>
   
-  * Level of the risk - **text**
-  * Classification of threat - 
-  * Prevent the vulnerabilities
+  * Level of the risk - Low
+  * Classification of threat - CWE ID 829///
+` * Identification : 
+  By examining header X-Content-Type-Options alert which is designed to protect web applications from MIME type sniffing attacks.This alert provided details about the web server used, which is apache and operates on the Windows operating system. Furthermore, the Cross-Domain JavaScript Source File Inclusion alert specifies the server-side scripting language utilized, which is javascript with.js extension, thereby allowing javascript to be executed on the server.
+
+    * Evaluation :
+  The Anti-MIME-Sniffing header X-Content-Type-Options was not set to 'nosniff', which allows older versions of Internet Explorer and Chrome to perform MIME-sniffing on the response body. This enables attackers to execute malicious code on the website by tricking the browser into interpreting a file as a different MIME type other than the MIME type that the file is actually intended to be. The website used one or more javascript files from a third-party domain where this parties can collect data of users. Moreover this vulnerability allows attackers to inject javascript file from different domain giving them the ability to get users information and credentials 
   
+  * Prevention :
+    1.Developers must ensure that the X-Content-Type-Options header is set to 'nosniff' for all web pages while also setting the content type for the website to text/html. Moreover, all the users must use web browsers, such as Google Chrome, Firefox, internet Explorer or any other browser that do not perform MIME-sniffing 
+
+    2.Allow JavaScript source files to be loaded from only trusted sources by evaluating these parties based on their performance before allowing, and ensuring that the sources cannot be managed by application end users.
+
+    3.Use HTTPS protocol to increase the security of the site and prevent attackers from obtaining user credentials. 
+
+
 </details>
 
 <details><summary>JS Library</summary>
@@ -192,6 +204,22 @@ The case study is designed to evaluate our problem-solving skills and teamwork t
   1. Ensure that any user-supplied data is sanitized and validated before being used by the application. This can include validating input data type, length, and format, as well as restricting input to only allow certain characters or patterns. 
   
   2. Implementing a Content Security Policy (CSP) with appropriate HTTP headers can help prevent XSS attacks by restricting the sources of content that can be loaded on the website and regular security assessments and testing can also help identify and address any vulnerabilities before they can be exploited by attackers.
+  
+</details>
+
+<details><summary>Re-examine Cache-control</summary>
+
+ * Level of the risk - Low
+  * Classification of threat - CWE ID 525
+  * Identification :   Cache controls are browser headers that indicate the server- and client-side catching policies. This policy gives the website the ability to control how pages and resources are cached. Caching allows websites to increase their performance, but if it is not implemented correctly, it can endanger the website and expose critical information to unauthorized users. Cache-control directives are set in the HTTP response header to acquire information from client and the server side on how to cache and store the response.
+
+  * Evaluation : While reviewing the web application, it was discovered that some configurations on the catche-control header were not correctly configured or were missing, and in this vulnerability, if the attacker modifies contents from third parties, it may affect the web application. Before sending a request to the server, review the cached data to ensure that no sensitive data is captured. 
+
+  * Prevention : 
+  1. To ensure high security, make sure the cache-control HTTP header is set to "no-cache," which requires the browser to confirm the resource with the server whether the catched resource has been updated or modified.  The cache-control HTTP header should be set to "no-store" which can be used when dealing with sensitive information. 
+  
+  2. For any asset resource such as images should be set to public where by that resource can cached by any cache, and setting the "max-age" as well where it determines the amount of time the response can be used from the time it was requested.
+
   
 </details>
 
