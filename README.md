@@ -112,6 +112,16 @@ NURUL SHAHIRAH BINTI AHMAD FIKRI|2013890  |Information Disclosure, Strict-Transp
 * Evaluation:
 
 * Prevention: 
+1.
+
+2.
+
+3. Use certificate pinning: To ensure that the web browser only accepts trusted SSL/TLS certificates. By confirming that the certificate displayed during the connection is the expected one, this will help prevent MITM attacks.
+
+4. Observe traffic and access logs: Carefully monitor traffic and access logs to spot any suspicious activity that might point to an ongoing attack. Respond right away to found vulnerabilities and put in place the required defences to stop attacks.
+
+
+
 
 </details>
 
