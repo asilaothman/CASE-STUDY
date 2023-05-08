@@ -112,11 +112,20 @@ NURUL SHAHIRAH BINTI AHMAD FIKRI|2013890  |Information Disclosure, Strict-Transp
 
 * Classification of threat - CWE ID 693
 
-* Identification : The X-Content-Type-Options header is a security header that directs web browsers not to override the response content-type header. This is significant because some web browsers may try to "sniff" the content type of a response to determine the manner in which to deal with it. For instance, if a response is marked as "text/html" but actually contains JavaScript code, a browser may still try to run the JavaScript code, which could cause security problems. A server could be vulnerable to attacks like content spoofing, where an attacker could change the response content-type to deceive a browser into running malicious code, by leaving out the X-Content-Type-Options header. X-Content-Type-Options Header Missing is a vulnerability where a web server fails to include the "X-Content-Type-Options" header in its HTTP responses, which corresponds to CWE. By tricking a web browser into thinking a response is a different content type, an attacker can use MIME sniffing attacks, which are mitigated by this header. A web server may be vulnerable to content spoofing, MIME sniffing, cross-site scripting (XSS), and clickjacking attacks without the "X-Content-Type-Options" header.
+* Identification : The X-Content-Type-Options header is a security header that directs web browsers not to override the response content-type header. This is significant because some web browsers may try to sniff the content type of a response to determine the manner in which to deal with it. For instance, if a response is marked as text/html but actually contains JavaScript code, a browser may still try to run the JavaScript code, which could cause security problems. A server could be vulnerable to attacks like content spoofing, where an attacker could change the response content-type to deceive a browser into running malicious code, by leaving out the X-Content-Type-Options header. X-Content-Type-Options Header Missing is a vulnerability where a web server fails to include the X-Content-Type-Options header in its HTTP responses, which corresponds to CWE. By tricking a web browser into thinking a response is a different content type, an attacker can use MIME sniffing attacks, which are mitigated by this header. A web server may be vulnerable to content spoofing, MIME sniffing, cross-site scripting (XSS), and clickjacking attacks without the X-Content-Type-Options header.
 
 * Evaluation:
 
 * Prevention: 
+1. Implement the X-Content-Type-Options header in HTTP responses: This header's value ought to be nosniff. By doing this, the web server instructs web browsers to only comprehend the response's content according to the response content-type header.
+
+2. Set the web application frameworks: The X-Content-Type-Options header can be set using built-in options in web application frameworks like ASP.NET and Ruby on Rails. By turning on this feature, MIME sniffing attacks can be avoided.
+
+3. Use a content delivery network (CDN): By delivering content with the appropriate MIME type and ensuring that the X-Content-Type-Options header is set in HTTP responses, a CDN can assist in preventing MIME sniffing attacks.
+
+4. Scan for vulnerabilities frequently: Regular vulnerability scans can help locate any X-Content-Type-Options headers that are missing from a security protocol.
+
+5. Maintain software updates: To prevent known vulnerabilities related to the X-Content-Type-Options header, make sure that the web server and all of its software components are up to date with the most recent security patches and updates.
 
 </details>
 
