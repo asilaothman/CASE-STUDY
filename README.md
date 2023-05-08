@@ -8,7 +8,7 @@ NAME                          |MATRIC NO                      | TASK            
 -------------------------------|-----------------------------|-----------------------------|
 JAMA SABIRIN SAAD         |1835578          |Introduction, Server OS, Re-examine Cache Control |
 ANIS ASILA BINTI OTHMAN          |    1914782         |Objectives, JS Library, Cross-Domain Javascript        |
-NUR ALIA BINTI MUHAMMAD   |2010884 |CSP, .Htaccess Information Leak, User Controllable(Potential XSS) |
+NUR ALIA BINTI MUHAMMAD   |2010884 |CSP, .Htaccess Information Leak, User Controllable (Potential XSS) |
 NURUL SHAHIRAH BINTI AHMAD FIKRI|2013890  |Information Disclosure, Strict-Transport-Security, X-Content-Type  |
 
 ## Tables of Content
