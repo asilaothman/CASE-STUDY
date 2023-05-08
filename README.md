@@ -42,9 +42,16 @@ NURUL SHAHIRAH BINTI AHMAD FIKRI|2013890  |Information Disclosure, Strict-Transp
 
 <details><summary>Server OS</summary>
   
-  * Level of the risk - **text**
-  * Classification of threat - 
-  * Prevent the vulnerabilities
+  * Level of the risk - Low
+ Classification of threat - CWE ID 829///
+Identification : By examining header X-Content-Type-Options alert which is designed to protect web applications from MIME type sniffing attacks.This alert provided details about the web server used, which is apache and operates on the Windows operating system. Furthermore, the Cross-Domain JavaScript Source File Inclusion alert specifies the server-side scripting language utilized, which is javascript with.js extension, thereby allowing javascript to be executed on the server.
+Evaluation :
+The Anti-MIME-Sniffing header X-Content-Type-Options was not set to 'nosniff', which allows older versions of Internet Explorer and Chrome to perform MIME-sniffing on the response body. This enables attackers to execute malicious code on the website by tricking the browser into interpreting a file as a different MIME type other than the MIME type that the file is actually intended to be. The website used one or more javascript files from a third-party domain where this parties can collect data of users. Moreover this vulnerability allows attackers to inject javascript file from different domain giving them the ability to get users information and credentials 
+Prevention :
+Developers must ensure that the X-Content-Type-Options header is set to 'nosniff' for all web pages while also setting the content type for the website to text/html. Moreover, all the users must use web browsers, such as Google Chrome, Firefox, internet Explorer or any other browser that do not perform MIME-sniffing 
+Allow JavaScript source files to be loaded from only trusted sources by evaluating these parties based on their performance before allowing, and ensuring that the sources cannot be managed by application end users.
+Use HTTPS protocol to increase the security of the site and prevent attackers from obtaining user credentials. 
+
   
 </details>
 
