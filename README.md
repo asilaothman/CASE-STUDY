@@ -9,7 +9,7 @@ NAME                          |MATRIC NO                      | TASK            
 JAMA SABIRIN SAAD         |1835578          |Introduction, Server OS, Re-examine Cache Control |
 ANIS ASILA BINTI OTHMAN          |    1914782         |Objectives, JS Library, Cross-Domain Javascript        |
 NUR ALIA BINTI MUHAMMAD   |2010884 |CSP, .Htaccess Information Leak, User Controllable(Potential XSS) |
-NURUL SHAHIRAH BINTI AHMAD FIKRI|2013890  |Information Disclosure, Strict-Transport-Secutity, X-Content-Type  |
+NURUL SHAHIRAH BINTI AHMAD FIKRI|2013890  |Information Disclosure, Strict-Transport-Security, X-Content-Type  |
 
 ## Tables of Content
 **[Introduction](#introduction)**<br>
@@ -92,7 +92,27 @@ NURUL SHAHIRAH BINTI AHMAD FIKRI|2013890  |Information Disclosure, Strict-Transp
   
 </details>
 
-<details><summary>Information Disclosure </summary>
+<details><summary>Strict-Transport-Security Header Not Set</summary>
+
+* Level of the risk - Low
+* Classification of threat - CWE ID 693
+* Identification :
+* Evaluation:
+* Prevention: 
+
+</details>
+
+<details><summary>X-Content-Type-Options Header Missing</summary>
+
+* Level of the risk - Low
+* Classification of threat - CWE ID 693
+* Identification :
+* Evaluation:
+* Prevention: 
+
+</details>
+
+<details><summary>Information Disclosure</summary>
 
 * Level of the risk - Informational
 * Classification of threat - CWE ID 200
