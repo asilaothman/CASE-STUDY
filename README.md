@@ -29,7 +29,7 @@ The case study is designed to evaluate our problem-solving skills and teamwork t
   
   * Level of the risk - Low
   * Classification of threat - CWE ID 829
-` * Identification : 
+`   * Identification:
   By examining header X-Content-Type-Options alert which is designed to protect web applications from MIME type sniffing attacks.This alert provided details about the web server used, which is apache and operates on the Windows operating system. Furthermore, the Cross-Domain JavaScript Source File Inclusion alert specifies the server-side scripting language utilized, which is javascript with.js extension, thereby allowing javascript to be executed on the server.
 
     * Evaluation :
