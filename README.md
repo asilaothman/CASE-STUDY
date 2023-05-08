@@ -112,9 +112,9 @@ NURUL SHAHIRAH BINTI AHMAD FIKRI|2013890  |Information Disclosure, Strict-Transp
 * Evaluation:
 
 * Prevention: 
-1.
+1. Strict-Transport-Security (HSTS) headers should be used: In order to require the user's web browser to only use HTTPS connections, set the Strict-Transport-Security header in all HTTP responses. By instructing the browser to use HTTPS for all upcoming requests to the domain, this header reduces the possibility of protocol downgrade attacks.
 
-2.
+2. Use HTTPS for all connections. Ensure that HTTP is never used when connecting to your web application. By doing this, MITM and session hijacking attacks will be reduced.
 
 3. Use certificate pinning: To ensure that the web browser only accepts trusted SSL/TLS certificates. By confirming that the certificate displayed during the connection is the expected one, this will help prevent MITM attacks.
 
