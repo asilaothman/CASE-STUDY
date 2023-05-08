@@ -19,7 +19,7 @@ NURUL SHAHIRAH BINTI AHMAD FIKRI|2013890  |Information Disclosure, Strict-Transp
 ## Introduction
 
 ## Objectives
-The case study is designed to evaluate our problem-solving skills and teamwork toward the given case. The  web application vulnerabilities that we have to identify are Malaysia Government website. 
+The case study is designed to evaluate our problem-solving skills and teamwork toward the given case. The  web application that we have to identify are Malaysia Government website. During this case study, we have been exposed how importance the use of web application components such as client-side scripting, authentication, authorisation, session management, database and files security. 
 
 ## Alerts And Vulnerabilities
 
