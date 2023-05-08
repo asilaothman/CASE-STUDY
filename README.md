@@ -16,45 +16,18 @@ NURUL SHAHIRAH BINTI AHMAD FIKRI|2013890  |Information Disclosure, Strict-Transp
 **[Ojectives](#objectives)**<br>
 **[Alerts & Vulnerabilities](#alerts-and-vulnerabilities)**<br>
 
-<details><summary>List of Figures</summary>
-  
- write text here
-  
-</details>
-
-<details><summary>List of Tables</summary>
-  
-  Write text here
-  
-</details>
-
-<details><summary>References</summary>
-  
-  Write text here
-  
-</details>
-
 ## Introduction
 
 ## Objectives
+The case study is designed to evaluate our problem-solving skills and teamwork toward the given case. The  web application vulnerabilities that we have to identify are Malaysia Government website. 
 
 ## Alerts And Vulnerabilities
 
 <details><summary>Server OS</summary>
   
-  * Level of the risk - Low
-  * Classification of threat - CWE ID 829
-  * Identification : 
-  By examining header X-Content-Type-Options alert which is designed to protect web applications from MIME type sniffing attacks.This alert provided details about the web server used, which is apache and operates on the Windows operating system. Furthermore, the Cross-Domain JavaScript Source File Inclusion alert specifies the server-side scripting language utilized, which is javascript with.js extension, thereby allowing javascript to be executed on the server.
-
-   * Evaluation :
-  The Anti-MIME-Sniffing header X-Content-Type-Options was not set to 'nosniff', which allows older versions of Internet Explorer and Chrome to perform MIME-sniffing on the response body. This enables attackers to execute malicious code on the website by tricking the browser into interpreting a file as a different MIME type other than the MIME type that the file is actually intended to be. The website used one or more javascript files from a third-party domain where this parties can collect data of users. Moreover this vulnerability allows attackers to inject javascript file from different domain giving them the ability to get users information and credentials 
-
-   * Prevention:
-  1.Developers must ensure that the X-Content-Type-Options header is set to 'nosniff' for all web pages while also setting the content type for the website to text/html. Moreover, all the users must use web browsers, such as Google Chrome, Firefox, internet Explorer or any other browser that do not perform MIME-sniffing 
-  2.Allow JavaScript source files to be loaded from only trusted sources by evaluating these parties based on their performance before allowing, and ensuring that the sources cannot be managed by application end users.
-  3.Use HTTPS protocol to increase the security of the site and prevent attackers from obtaining user credentials. 
-
+  * Level of the risk - **text**
+  * Classification of threat - 
+  * Prevent the vulnerabilities
   
 </details>
 
@@ -63,16 +36,41 @@ NURUL SHAHIRAH BINTI AHMAD FIKRI|2013890  |Information Disclosure, Strict-Transp
   * Level of the risk - Medium
   * Classification of threat - CWE ID 829
   * Identification:
-    JavaScript libraries are collections of pre-written JavaScript code that provide specific functionalities and features. They are designed to make it easier for developers to build web applications by providing ready-to-use functions and components. 
+    JavaScript libraries are collections of pre-written JavaScript code that provide specific functionalities and features. They are designed to make it easier for developers to build web applications by providing ready-to-use functions and components. The risk associated with CWE ID 829 is that the untrusted functionality can introduce security vulnerabilities or enable malicious actions within the software. The untrusted code may have unintended or malicious behaviors that could compromise the integrity, confidentiality, or availability of the system.
     
   * Evaluation:
     During an evaluation, it shows that library jquery, version 3.3.1 is vulnerable. It can lead to exploitation of known vulnerabilities, code execution, data breaches and Denial-of-Service (DoS) Attack. The vulnerable versions of jQuery File Upload had a remote code execution vulnerability that allowed attackers to execute arbitrary code on the server hosting the application. This vulnerability was related to the insecure handling of user-supplied file names.
    
   * Prevention:
-    1.  Regularly update your libraries and dependencies to ensure you're using the latest versions with security patches. 
-    
-    2. Keeping an eye on security advisories and following best practices for secure coding can help minimize the risk of using vulnerable libraries.
-    
+1. Validate Inputs: Always validate and sanitize any inputs from untrusted sources to prevent injection attacks or unexpected behavior.
+
+2. Code Reviews and Audits: Perform regular code reviews and security audits to identify any potential vulnerabilities or risks introduced by the integration of untrusted functionality.
+
+3. Least Privilege: Limit the permissions and privileges granted to the untrusted code to reduce the potential damage it can cause if compromised.
+
+4. Update and Patch: Keep all software components, including the untrusted functionality, up to date with the latest security patches and updates to mitigate known vulnerabilities.    
+  
+</details>
+
+<details><summary>Cross-Domain Javascript</summary>
+  
+  * Level of the risk - Low
+  * Classification of threat - CWE ID 829
+  * Identification :
+    Cross-domain JavaScript source file inclusion is a security warning that can affect a web application that runs one or more Javascript files from a third-party domain. It has been identified that the page includes one or more script files from a third-party domain. Cross-Origin Resource Sharing standard are used and it works by adding new HTTP headers that let servers describe which origins are permitted to read that information from a web browser. The website are exposed to, if the third-party intentionally or unintentionally holds a malicious content, it can be added and executed on the victim’s web application. This possibility occurs when the external Javascript is not validated.
+  
+  * Evaluation :
+  During an evaluation, there is a possible execution of malicious javascript and also possible user data manipulation and leakage. For example, when a user sends a request, the script will be updated with the response message. If the response is stored in global variables, everyone can read it. If the sensitive information is included in a JSONP response, the executed function can be overridden to get the sensitive information. This trick can be used for global functions as well. Instead of overriding the executed functions, we may use custom-coded callback functions for global functions.
+  
+  * Prevention :
+ 1. Avoid placing sensitive information inside javascript files or JSONP.
+
+2. Always try to sanitize user entries that are stored in JSON files.
+
+3. Use subresource integrity. It helps browsers to check whether the fetched resources are unnecessarily manipulated or not.
+
+4. Enable Content Security Policy (CSP).
+  
 </details>
 
 <details><summary>CSP</summary>
@@ -119,7 +117,7 @@ NURUL SHAHIRAH BINTI AHMAD FIKRI|2013890  |Information Disclosure, Strict-Transp
 
 * Identification : Strict-Transport-Security Header Not Set has a vulnerability that allows a man-in-the-middle (MITM) attack to be used to intercept communication between a user's web browser and the server. Sensitive data theft, including the theft of login credentials or personal information, may result from this. A user's web browser might not be aware to always use a secure HTTPS connection when interacting with the server without the Strict-Transport-Security header. This may make the connection open to data theft and interception.
 
-* Evaluation: During an evaluation, the website was found to be vulnerable to numerous security risks because the Strict-Transport-Security (STS) header is missing. Attackers may use SSL stripping techniques to convert HTTPS requests to HTTP requests, conduct Man-in-the-Middle (MITM) attacks, intercept traffic, or use clickjacking attacks to trick users into clicking on harmful links or buttons. 
+* Evaluation: During an evaluation, it shows that 
 
 * Prevention: 
 1. Strict-Transport-Security (HSTS) headers should be used: In order to require the user's web browser to only use HTTPS connections, set the Strict-Transport-Security header in all HTTP responses. By instructing the browser to use HTTPS for all upcoming requests to the domain, this header reduces the possibility of protocol downgrade attacks.
@@ -138,9 +136,9 @@ NURUL SHAHIRAH BINTI AHMAD FIKRI|2013890  |Information Disclosure, Strict-Transp
 
 * Classification of threat - CWE ID 693
 
-* Identification : The X-Content-Type-Options header is a security header that directs web browsers not to override the response content-type header. This is significant because some web browsers may try to sniff the content type of a response to determine the manner in which to deal with it. For instance, if a response is marked as text/html but actually contains JavaScript code, a browser may still try to run the JavaScript code, which could cause security problems. A server could be vulnerable to attacks like content spoofing, where an attacker could change the response content type to deceive a browser into running malicious code, by leaving out the X-Content-Type-Options header. X-Content-Type-Options Header Missing is a vulnerability where a web server fails to include the X-Content-Type-Options header in its HTTP responses, which corresponds to CWE. By tricking a web browser into thinking a response is a different content type, an attacker can use MIME sniffing attacks, which are mitigated by this header. A web server may be vulnerable to content spoofing, MIME sniffing, cross-site scripting (XSS), and clickjacking attacks without the X-Content-Type-Options header.
+* Identification : The X-Content-Type-Options header is a security header that directs web browsers not to override the response content-type header. This is significant because some web browsers may try to sniff the content type of a response to determine the manner in which to deal with it. For instance, if a response is marked as text/html but actually contains JavaScript code, a browser may still try to run the JavaScript code, which could cause security problems. A server could be vulnerable to attacks like content spoofing, where an attacker could change the response content-type to deceive a browser into running malicious code, by leaving out the X-Content-Type-Options header. X-Content-Type-Options Header Missing is a vulnerability where a web server fails to include the X-Content-Type-Options header in its HTTP responses, which corresponds to CWE. By tricking a web browser into thinking a response is a different content type, an attacker can use MIME sniffing attacks, which are mitigated by this header. A web server may be vulnerable to content spoofing, MIME sniffing, cross-site scripting (XSS), and clickjacking attacks without the X-Content-Type-Options header.
 
-* Evaluation: During an evaluation, the X-Content-Type-Options header with the value nosniff is present on the website. The nosniff value instructs the browser to ignore files with invalid MIME types, reducing the risk of script-based attacks like cross-site scripting (XSS), even though attackers can exploit vulnerabilities by uploading files with those MIME types. To stop attackers from taking advantage of holes in the website's defenses and launching malicious attacks, web developers should configure this header properly.
+* Evaluation:
 
 * Prevention: 
 1. Implement the X-Content-Type-Options header in HTTP responses: This header's value ought to be nosniff. By doing this, the web server instructs web browsers to only comprehend the response's content according to the response content-type header.
@@ -163,7 +161,7 @@ NURUL SHAHIRAH BINTI AHMAD FIKRI|2013890  |Information Disclosure, Strict-Transp
 
 * Identification : Information disclosure can be exploited by attackers in a variety of ways. Suspicious comments, which could be shared on a website or within a JavaScript file like the one in the URL, might be used by attackers to reveal confidential information such as usernames, passwords, or other personal data. This information could be used by attackers to carry out additional attacks, such as phishing or identity theft. Attackers could also use information disclosure as a form of monitoring, gathering information about a target or system in order to plan a more sophisticated attack. If suspicious comments indicate sensitive or private information to unauthorised parties, they may be classified as an information leak vulnerability under CWE-200. Such comments might include information that attackers might utilise to gain unauthorized access to a system or conduct other malicious activities.
 
-* Evaluation: Suspicious comments were discovered in the source code of the website during the evaluation process, which may have the potential to reveal personal data. Attackers may take advantage of these comments to acquire sensitive data like usernames, passwords, and API keys as well as important knowledge about the infrastructure and vulnerabilities of the website. To prevent attackers from taking advantage of such comments and engaging in malicious activity, it is essential for web developers to make sure that they are removed from the source code.
+* Evaluation:
 
 * Prevention: 
 1. Secure coding practices: Developers should adhere to secure coding practices and use code review tools to identify and eliminate any suspicious comments. They should also be acquainted with best practices for security and kept up-to-date on the latest security threats and vulnerabilities.
@@ -194,22 +192,6 @@ NURUL SHAHIRAH BINTI AHMAD FIKRI|2013890  |Information Disclosure, Strict-Transp
   2. Implementing a Content Security Policy (CSP) with appropriate HTTP headers can help prevent XSS attacks by restricting the sources of content that can be loaded on the website and regular security assessments and testing can also help identify and address any vulnerabilities before they can be exploited by attackers.
   
 </details>
-<details><summary>Re-examine Cache-control</summary>
-
- * Level of the risk - Low
-  * Classification of threat - CWE ID 525
-  * Identification :   Cache controls are browser headers that indicate the server- and client-side catching policies. This policy gives the website the ability to control how pages and resources are cached. Caching allows websites to increase their performance, but if it is not implemented correctly, it can endanger the website and expose critical information to unauthorized users. Cache-control directives are set in the HTTP response header to acquire information from client and the server side on how to cache and store the response.
-
-  * Evaluation : While reviewing the web application, it was discovered that some configurations on the catche-control header were not correctly configured or were missing, and in this vulnerability, if the attacker modifies contents from third parties, it may affect the web application. Before sending a request to the server, review the cached data to ensure that no sensitive data is captured. 
-
-  * Prevention : 
-  1. To ensure high security, make sure the cache-control HTTP header is set to "no-cache," which requires the browser to confirm the resource with the server whether the catched resource has been updated or modified.  The cache-control HTTP header should be set to "no-store" which can be used when dealing with sensitive information. 
-  
-  2. For any asset resource such as images should be set to public where by that resource can cached by any cache, and setting the "max-age" as well where it determines the amount of time the response can be used from the time it was requested.
-
-  
-</details>
-
 
 
 
