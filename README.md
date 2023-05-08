@@ -107,7 +107,7 @@ NURUL SHAHIRAH BINTI AHMAD FIKRI|2013890  |Information Disclosure, Strict-Transp
 
 * Classification of threat - CWE ID 319
 
-* Identification :
+* Identification : Strict-Transport-Security Header Not Set has a vulnerability that allows a man-in-the-middle (MITM) attack to be used to intercept communication between a user's web browser and the server. Sensitive data theft, including the theft of login credentials or personal information, may result from this. A user's web browser might not be aware to always use a secure HTTPS connection when interacting with the server without the Strict-Transport-Security header. This may make the connection open to data theft and interception.
 
 * Evaluation:
 
