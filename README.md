@@ -17,9 +17,11 @@ NURUL SHAHIRAH BINTI AHMAD FIKRI|2013890  |Information Disclosure, Strict-Transp
 **[Alerts & Vulnerabilities](#alerts-and-vulnerabilities)**<br>
 
 ## Introduction
+In this case study, we were able to examine and analyse the Malaysian government website by identifying all of its vulnerabilities and level of risk. The overall level of risk obtained was measured by assigning ranks such as high, low, or medium, and we obtained solutions to minimise the risk and overcome the threats it would face.We acknowledge that by recognising all of the alerts identified on this website while using Zap application, we were able to identify solutions to reduce risks and develop web applications that have high performance and security.
+
 
 ## Objectives
-The case study is designed to evaluate our problem-solving skills and teamwork toward the given case. The  web application that we have to identify are Malaysia Government website. During this case study, we have been exposed how importance the use of web application components such as client-side scripting, authentication, authorisation, session management, database and files security. 
+The case study is designed to evaluate our problem-solving skills and teamwork toward the given case. The  web application vulnerabilities that we have to identify are Malaysia Government website. 
 
 ## Alerts And Vulnerabilities
 
