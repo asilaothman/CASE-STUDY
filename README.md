@@ -50,7 +50,7 @@ NURUL SHAHIRAH BINTI AHMAD FIKRI|2013890  |Information Disclosure, Strict-Transp
    * Evaluation :
   The Anti-MIME-Sniffing header X-Content-Type-Options was not set to 'nosniff', which allows older versions of Internet Explorer and Chrome to perform MIME-sniffing on the response body. This enables attackers to execute malicious code on the website by tricking the browser into interpreting a file as a different MIME type other than the MIME type that the file is actually intended to be. The website used one or more javascript files from a third-party domain where this parties can collect data of users. Moreover this vulnerability allows attackers to inject javascript file from different domain giving them the ability to get users information and credentials 
 
-    * Prevention :
+   * Prevention:
   1.Developers must ensure that the X-Content-Type-Options header is set to 'nosniff' for all web pages while also setting the content type for the website to text/html. Moreover, all the users must use web browsers, such as Google Chrome, Firefox, internet Explorer or any other browser that do not perform MIME-sniffing 
   2.Allow JavaScript source files to be loaded from only trusted sources by evaluating these parties based on their performance before allowing, and ensuring that the sources cannot be managed by application end users.
   3.Use HTTPS protocol to increase the security of the site and prevent attackers from obtaining user credentials. 
