@@ -96,7 +96,9 @@ NURUL SHAHIRAH BINTI AHMAD FIKRI|2013890  |Information Disclosure, Strict-Transp
 
 * Level of the risk - Informational
 * Classification of threat - CWE ID 200
-* Identification : 
+* Identification :
+* Evaluation:
+* Prevention: 
 
 </details>
 
