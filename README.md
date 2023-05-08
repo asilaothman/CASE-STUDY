@@ -109,7 +109,7 @@ NURUL SHAHIRAH BINTI AHMAD FIKRI|2013890  |Information Disclosure, Strict-Transp
 
 * Identification : Strict-Transport-Security Header Not Set has a vulnerability that allows a man-in-the-middle (MITM) attack to be used to intercept communication between a user's web browser and the server. Sensitive data theft, including the theft of login credentials or personal information, may result from this. A user's web browser might not be aware to always use a secure HTTPS connection when interacting with the server without the Strict-Transport-Security header. This may make the connection open to data theft and interception.
 
-* Evaluation:
+* Evaluation: During an evaluation, it shows that 
 
 * Prevention: 
 1. Strict-Transport-Security (HSTS) headers should be used: In order to require the user's web browser to only use HTTPS connections, set the Strict-Transport-Security header in all HTTP responses. By instructing the browser to use HTTPS for all upcoming requests to the domain, this header reduces the possibility of protocol downgrade attacks.
