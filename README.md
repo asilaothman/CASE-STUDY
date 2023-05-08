@@ -96,7 +96,7 @@ NURUL SHAHIRAH BINTI AHMAD FIKRI|2013890  |Information Disclosure, Strict-Transp
 
 * Level of the risk - Low
 
-* Classification of threat - CWE ID 693
+* Classification of threat - CWE ID 319
 
 * Identification :
 
