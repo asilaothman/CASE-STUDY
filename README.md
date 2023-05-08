@@ -50,10 +50,19 @@ NURUL SHAHIRAH BINTI AHMAD FIKRI|2013890  |Information Disclosure, Strict-Transp
 
 <details><summary>JS Library</summary>
   
-  * Level of the risk - **text**
-  * Classification of threat - 
-  * Prevent the vulnerabilities
-  
+  * Level of the risk - Medium
+  * Classification of threat - CWE ID 829
+  * Identification:
+    JavaScript libraries are collections of pre-written JavaScript code that provide specific functionalities and features. They are designed to make it easier for developers to build web applications by providing ready-to-use functions and components. 
+    
+  * Evaluation:
+    During an evaluation, it shows that library jquery, version 3.3.1 is vulnerable. It can lead to exploitation of known vulnerabilities, code execution, data breaches and Denial-of-Service (DoS) Attack. The vulnerable versions of jQuery File Upload had a remote code execution vulnerability that allowed attackers to execute arbitrary code on the server hosting the application. This vulnerability was related to the insecure handling of user-supplied file names.
+   
+  * Prevention:
+    1.  Regularly update your libraries and dependencies to ensure you're using the latest versions with security patches. 
+    
+    2. Keeping an eye on security advisories and following best practices for secure coding can help minimize the risk of using vulnerable libraries.
+    
 </details>
 
 <details><summary>CSP</summary>
