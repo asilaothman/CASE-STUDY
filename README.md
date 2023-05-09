@@ -231,3 +231,6 @@ In this case study, we were able to examine and analyse the Malaysian government
 
 ## References
 * Using OWASP ZAP to scan website for web application vulnerabilities. Using both automated scan and manual explore.
+* --Cache-control https://www.keycdn.com/support/cache-control
+* --Cross-domain javascript source file inclusion https://scanrepeat.com/web-security-knowledge-base/cross-domain-javascript-source-file-inclusion
+* ---X-content-type-options https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Content-Type-Options
