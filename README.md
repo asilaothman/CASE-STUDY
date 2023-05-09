@@ -14,6 +14,7 @@ NURUL SHAHIRAH BINTI AHMAD FIKRI|2013890  |Information Disclosure, Strict-Transp
 ## Tables of Content
 **[Introduction](#introduction)**<br>
 **[Ojectives](#objectives)**<br>
+**[References](#references)**<br>
 **[Alerts & Vulnerabilities](#alerts-and-vulnerabilities)**<br>
 
 ## Introduction
@@ -228,5 +229,5 @@ In this case study, we were able to examine and analyse the Malaysian government
   
 </details>
 
-
-
+## References
+* Using OWASP ZAP to scan website for web application vulnerabilities. Using both automated scan and manual explore.
