@@ -136,12 +136,12 @@ In this case study, we were able to examine and analyse the Malaysian government
 
 * Identification : Strict-Transport-Security Header Not Set has a vulnerability that allows a man-in-the-middle (MITM) attack to be used to intercept communication between a user's web browser and the server. Sensitive data theft, including the theft of login credentials or personal information, may result from this. A user's web browser might not be aware to always use a secure HTTPS connection when interacting with the server without the Strict-Transport-Security header. This may make the connection open to data theft and interception.
 
-* Evaluation: During an evaluation, it shows that it was found that the absence of the Strict-Transport-Security (STS) header leaves the site vulnerable to multiple security threats. Attackers can potentially carry out Man-in-the-Middle (MITM) attacks, intercept traffic and convert HTTPS requests to HTTP requests using SSL stripping techniques, and use clickjacking attacks to trick users into clicking on malicious links or buttons. Web developers must understand the importance of implementing STS headers correctly to safeguard sensitive information and prevent security breaches. Implementing STS headers on the website is necessary to secure web applications against these types of threats.
+* Evaluation: During an evaluation, it was found that the absence of the Strict-Transport-Security (STS) header leaves the site vulnerable to multiple security threats. Attackers can potentially carry out Man-in-the-Middle (MITM) attacks, intercept traffic and convert HTTPS requests to HTTP requests using SSL stripping techniques, and use clickjacking attacks to trick users into clicking on malicious links or buttons. Web developers must understand the importance of implementing STS headers correctly to safeguard sensitive information and prevent security breaches. Implementing STS headers on the website is necessary to secure web applications against these types of threats.
 
 * Prevention: 
 1. Strict-Transport-Security (HSTS) headers should be used: In order to require the user's web browser to only use HTTPS connections, set the Strict-Transport-Security header in all HTTP responses. By instructing the browser to use HTTPS for all upcoming requests to the domain, this header reduces the possibility of protocol downgrade attacks.
 
-2. Use HTTPS for all connections. Ensure that HTTP is never used when connecting to your web application. By doing this, MITM and session hijacking attacks will be reduced.
+2. Use HTTPS for all connections: Ensure that HTTP is never used when connecting to your web application. By doing this, MITM and session hijacking attacks will be reduced.
 
 3. Use certificate pinning: To ensure that the web browser only accepts trusted SSL/TLS certificates. By confirming that the certificate displayed during the connection is the expected one, this will help prevent MITM attacks.
 
