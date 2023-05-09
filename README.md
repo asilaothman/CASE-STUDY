@@ -68,7 +68,7 @@ In this case study, we were able to examine and analyse the Malaysian government
 
 3. Least Privilege: Limit the permissions and privileges granted to the untrusted code to reduce the potential damage it can cause if compromised.
 
-4. Update and Patch: Keep all software components, including the untrusted functionality, up to date with the latest security patches and updates to mitigate known vulnerabilities.    
+4. Update and Patch: Keep all software components, including the untrusted functionality, up to date with the latest security patches and updates to mitigate known vulnerabilities. Visit [jquery.com](https://jquery.com) to know the updated version.     
   
 </details>
 
